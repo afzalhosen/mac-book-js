@@ -1,0 +1,32 @@
+#logo {
+    color: white;
+    font-style: italic;
+    background-color: greenyellow;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+footer {
+    text-align: center;
+    background-color: darkgrey;
+    color: white;
+    padding: 10px;
+}
+
+#ryans-italic {
+    font-style: italic;
+    color: greenyellow;
+}
+
+#promo-design {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#promo-design:hover {
+    color: red;
+}

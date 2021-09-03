@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/unnamed-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>RYANS</title>
+</head>
+
+<body class="container">
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><span id="logo">RYANS</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">New Aarrival</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Apple</a></li>
+                                <li><a class="dropdown-item" href="#">Asus</a></li>
+                                <li><a class="dropdown-item" href="#">Lenovo</a></li>
+                                <li><a class="dropdown-item" href="#">HP</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                <li><a class="dropdown-item" href="#">Acer</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Flash Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Computer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Laptop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Camera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Accessories</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Here" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="d-flex justify-content-around">
+            <div>
+                <img class="img-fluid" src="images/router_trade_in__ci5rsfiso6s2_large.jpg" alt="">
+            </div>
+            <div>
+                <h1>Customize your Blue 24-inch iMac<br> with Apple M1 Chip</h1>
+                <p>256GB storage 8GB unified memory 24-inch 4.5K Retina display Two Thunderbolt / USB 4 ports Two USB 3 ports Gigabit Ethernet</p>
+                <h6>Memory</h6>
+                <button type="button" class="btn btn-outline-secondary btn-sm">8GB unified memory(Default)</button>
+                <button id="extra-memory-btn" type="button" class="btn btn-outline-secondary btn-sm">16GB unified memory</button>
+                <h6 class="mt-4">Storage</h6>
+                <button type="button" class="btn btn-outline-secondary btn-sm">256GB SSD storage(Default)</button>
+                <button id="512GB-SSD-btn" type="button" class="btn btn-outline-secondary btn-sm">512GB SSD storage</button>
+                <button id="1TB-SSD-btn" type="button" class="btn btn-outline-secondary btn-sm">1TB SSD storage</button>
+                <h6 class="mt-4">Choose Your Delivery</h6>
+                <button type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 10 FREE Prime Delivery</button>
+                <button id="delivery-cost-btn" type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 3 Delivery Cost $20</button>
+                <div class="mt-5 d-flex justify-content-between">
+                    <h6>Base Price</h6>
+                    <h6>$<span>1219</span></h6>
+                </div>
+                <hr class="bg-warning">
+                <div class="d-flex justify-content-between">
+                    <h6>Extra Memory Cost</h6>
+                    <h6>+$<span id="extra-memory-cost">0</span></h6>
+                </div>
+                <hr class="bg-warning">
+                <div class="d-flex justify-content-between">
+                    <h6>Extra Stroage Cost</h6>
+                    <h6>+$<span id="extra-storage-cost">0</span></h6>
+                </div>
+                <hr class="bg-warning">
+                <div class="d-flex justify-content-between">
+                    <h6>Delivery Cost</h6>
+                    <h6>+$<span id="delivery-cost">0</span></h6>
+                </div>
+                <hr class="bg-dark">
+                <div class="d-flex justify-content-between mb-4">
+                    <h6>Total Price</h6>
+                    <h6>$<span id="total-amount">1219</span></h6>
+                </div>
+                <h6>Add Promo Code</h6>
+                <p>To get 20% off as a first buyer please paste <span title="Get Promo"><a id="promo-design" href="#">your promo</a></span> bellow</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Paste Your Promo">
+                    <button class="btn btn-outline-danger " type="button">Apply</button>
+                </div>
+                <button type="button" class="btn btn-outline-dark">Go To  Cart</button>
+
+            </div>
+        </div>
+        <hr class="bg-danger mt-5 mb-5">
+        <div class="d-flex justify-content-lg-evenly mb-5">
+            <h2>Your Total Cost After Using Promo:</h2>
+            <h2>$<span>0</span></h2>
+        </div>
+
+    </main>
+    <footer>
+        &copy;All Rights are Reserved to <span id="ryans-italic">Ryans Electronics Ltd. </span>-2021
+    </footer>
+    <script src="mac-book.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
