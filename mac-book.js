@@ -1,38 +1,43 @@
-function CustomizationBtn(extraCostID, memory16GB, SSD512, SSD1TB) {
-    var extraCost = document.getElementById(extraCostID);
-    var exrtaCostAmount = parseFloat(extraCost.innerText);
-    if (memory16GB == true) {
-        var totalCost = exrtaCostAmount + 100;
-        var totalExtra = extraCost.innerText = totalCost;
-    } else if (SSD512 == 'yes') {
-        var totalCost = exrtaCostAmount + 180;
-        extraCost.innerText = totalCost;
-    } else if (SSD1TB == 'yes') {
-        var totalCost = exrtaCostAmount + 280;
-        extraCost.innerText = totalCost;
-    } else {
-        var totalCost = exrtaCostAmount + 20;
-        extraCost.innerText = totalCost;
+// onclick functions 
+function CustomConfigurs(customization) {
+    if (customization === '8gb') {
+        customConfigureCost('extra-memory-cost', 0)
+    } else if (customization === '16gb') {
+        customConfigureCost('extra-memory-cost', 180)
+    } else if (customization === '256gb') {
+        customConfigureCost('extra-storage-cost', 0)
+    } else if (customization === '512gb') {
+        customConfigureCost('extra-storage-cost', 100)
+    } else if (customization === '1tb') {
+        customConfigureCost('extra-storage-cost', 180)
+    } else if (customization === 'prime') {
+        customConfigureCost('delivery-cost', 0)
+    } else if (customization === 'first') {
+        customConfigureCost('delivery-cost', 20)
     }
-    var totalPrice = document.getElementById('total-amount')
-    var totalPriceFloat = parseFloat(totalPrice.innerText);
-    var totalExtra = extraCost.innerText = totalCost;
-    var totalPriceAmount = totalPriceFloat + totalExtra
-    totalPrice.innerText = totalPriceAmount;
+    totalCost()
 }
-
-
-
-
-document.getElementById('extra-memory-btn').addEventListener('click', function() {
-    var custom = CustomizationBtn('extra-memory-cost', true);
-})
-document.getElementById('512GB-SSD-btn').addEventListener('click', function() {
-    var custom = CustomizationBtn('extra-storage-cost', false, 'yes', );
-})
-document.getElementById('1TB-SSD-btn').addEventListener('click', function() {
-    var custom = CustomizationBtn('extra-storage-cost', false, 'no', 'yes');
-})
-document.getElementById('delivery-cost-btn').addEventListener('click', function() {
-    var custom = CustomizationBtn('delivery-cost');
-})
+// field updating function after customization
+function customConfigureCost(Configure, cost) {
+    document.getElementById(Configure).innerText = cost
+}
+// total updating function after customization
+function totalCost() {
+    var total = 1299 + costAmount('extra-memory-cost') + costAmount('extra-storage-cost') + costAmount('delivery-cost');
+    customConfigureCost('total-price', total)
+    customConfigureCost('coupon-amount', total)
+}
+// converting as float from text
+function costAmount(perameter) {
+    var total = document.getElementById(perameter).innerText
+    return parseFloat(total)
+}
+// promo submitting function 
+function promoCode() {
+    var promo = document.getElementById('promoCode').value
+    if (promo == 'stevekaku') {
+        var totalAmount = costAmount('total-price')
+        var OfferPrice = totalAmount * 80 / 100
+        customConfigureCost('coupon-amount', OfferPrice)
+    }
+}

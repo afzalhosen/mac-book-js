@@ -12,6 +12,7 @@
 </head>
 
 <body class="container">
+    <!-- header starts -->
     <header class="mb-5">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
@@ -56,6 +57,7 @@
             </div>
         </nav>
     </header>
+    <!-- main Content starts -->
     <main>
         <div class="d-flex justify-content-around">
             <div>
@@ -65,19 +67,22 @@
                 <h1>Customize your Blue 24-inch iMac<br> with Apple M1 Chip</h1>
                 <p>256GB storage 8GB unified memory 24-inch 4.5K Retina display Two Thunderbolt / USB 4 ports Two USB 3 ports Gigabit Ethernet</p>
                 <h6>Memory</h6>
-                <button type="button" class="btn btn-outline-secondary btn-sm">8GB unified memory(Default)</button>
-                <button id="extra-memory-btn" type="button" class="btn btn-outline-secondary btn-sm">16GB unified memory</button>
+                <!-- Customizing buttons starts -->
+                <button onclick="CustomConfigurs('8gb')" type="button" class="btn btn-outline-secondary btn-sm">8GB unified memory(Default)</button>
+                <button onclick="CustomConfigurs('16gb')" type="button" class="btn btn-outline-secondary btn-sm">16GB unified memory</button>
                 <h6 class="mt-4">Storage</h6>
-                <button type="button" class="btn btn-outline-secondary btn-sm">256GB SSD storage(Default)</button>
-                <button id="512GB-SSD-btn" type="button" class="btn btn-outline-secondary btn-sm">512GB SSD storage</button>
-                <button id="1TB-SSD-btn" type="button" class="btn btn-outline-secondary btn-sm">1TB SSD storage</button>
-                <h6 class="mt-4">Choose Your Delivery</h6>
-                <button type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 10 FREE Prime Delivery</button>
-                <button id="delivery-cost-btn" type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 3 Delivery Cost $20</button>
+                <button onclick="CustomConfigurs('256gb')" type="button" class="btn btn-outline-secondary btn-sm">256GB SSD storage(Default)</button>
+                <button onclick="CustomConfigurs('512gb')" type="button" class="btn btn-outline-secondary btn-sm">512GB SSD storage</button>
+                <button onclick="CustomConfigurs('1tb')" type="button" class="btn btn-outline-secondary btn-sm">1TB SSD storage</button>
+                <h6 class="mt-4 ">Choose Your Delivery</h6>
+                <button onclick="CustomConfigurs('prime')" type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 10 FREE Prime Delivery</button>
+                <button onclick="CustomConfigurs('first')" type="button" class="btn btn-outline-secondary btn-sm">Friday, sep 3 Delivery Cost $20</button>
+                <!-- Customizing Buttons end -->
                 <div class="mt-5 d-flex justify-content-between">
                     <h6>Base Price</h6>
-                    <h6>$<span>1219</span></h6>
+                    <h6>$<span>1299</span></h6>
                 </div>
+                <!-- cost updating Field after Customizing -->
                 <hr class="bg-warning">
                 <div class="d-flex justify-content-between">
                     <h6>Extra Memory Cost</h6>
@@ -96,24 +101,26 @@
                 <hr class="bg-dark">
                 <div class="d-flex justify-content-between mb-4">
                     <h6>Total Price</h6>
-                    <h6>$<span id="total-amount">1219</span></h6>
+                    <h6>$<span id="total-price">1299</span></h6>
                 </div>
+                <!-- cost updating Field after Customizing closed -->
+                <!-- Promo section -->
                 <h6>Add Promo Code</h6>
                 <p>To get 20% off as a first buyer please paste <span title="Get Promo"><a id="promo-design" href="#">your promo</a></span> bellow</p>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Paste Your Promo">
-                    <button class="btn btn-outline-danger " type="button">Apply</button>
+                    <input id="promoCode" type="text" class="form-control" placeholder="Paste Your Promo">
+                    <button onclick="promoCode()" class="btn btn-outline-danger" type="button">Apply</button>
                 </div>
-                <button type="button" class="btn btn-outline-dark">Go To  Cart</button>
-
+                <!-- Promo section closed -->
             </div>
+        </div>
         </div>
         <hr class="bg-danger mt-5 mb-5">
         <div class="d-flex justify-content-lg-evenly mb-5">
-            <h2>Your Total Cost After Using Promo:</h2>
-            <h2>$<span>0</span></h2>
+            <h2>Now Your Payable Amount:</h2>
+            <!-- amount after using promo  -->
+            <h2>$<span id="coupon-amount">1299</span></h2>
         </div>
-
     </main>
     <footer>
         &copy;All Rights are Reserved to <span id="ryans-italic">Ryans Electronics Ltd. </span>-2021
